@@ -9,7 +9,8 @@ const DetailFooter = () => {
     discord: 'https://discord.gg/MtayqAs6',
     twitter: 'https://twitter.com/CanastaDomains',
     docs: 'https://docs.canasta.domains',
-    medium: 'https://blog.canasta.domains/'
+    medium: 'https://blog.canasta.domains/',
+    github: 'https://github.com/canastabns'
   };
 
   const clickToUrl = (type) => {
