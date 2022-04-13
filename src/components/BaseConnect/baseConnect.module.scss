@@ -1,0 +1,21 @@
+@use '//src/scss/variables.scss' as v;
+
+.connectButton {
+  cursor: pointer;
+  color: map-get(v.$colors, primary);
+  min-width: 100%;
+  padding: 0.5rem 0;
+  box-shadow: none;
+  border-width: 0.3rem;
+  border-style: solid;
+  border-color: map-get(v.$colors, primary);
+  border-radius: 2rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  a {
+    color: map-get(v.$colors, primary);
+  }
+}

@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.iconContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+  font-weight: 300;
+  font-size: 28px;
+  text-align: center;
+}
+
+.subTitle {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}

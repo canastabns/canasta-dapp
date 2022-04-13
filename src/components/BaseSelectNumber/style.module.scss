@@ -1,0 +1,78 @@
+@use '//src/scss/variables.scss' as v;
+
+.noSelected {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.rowOne {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  position: relative;
+
+  .time {
+    font-size: 1.5rem;
+    width: 170px;
+    text-align: center;
+    @extend .noSelected;
+  }
+
+  .addLess {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.5rem;
+    border: 1px solid;
+    width: 3rem;
+    font-size: 1.75rem;
+    height: 3rem;
+    border-radius: 50%;
+    transition: all 0.2s ease 0s;
+    font-weight: 100;
+    @extend .noSelected;
+  }
+
+  .less {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .selectTime {
+    border-bottom: 1px solid;
+    width: 100%;
+
+    .time {
+      border-bottom: none;
+      font-size: 1.2rem;
+      width: 100%;
+    }
+    .less,
+    .more {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+
+}

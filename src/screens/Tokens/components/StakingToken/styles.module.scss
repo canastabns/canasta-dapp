@@ -1,0 +1,156 @@
+@use '//src/scss/variables.scss'as v;
+
+.container {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  min-height: 300px;
+  height: 100%;
+
+  &__title {
+    display: flex;
+    color: #F4B919;
+    font-size: 2rem;
+    border-bottom: 1px solid #F4B919;
+    width: 95%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    min-height: 5rem;
+    justify-content: center;
+    align-items: center;
+
+    &.title__right {
+      color: #0F1320;
+      border-bottom: 1px solid #0F1320;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__body_right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem;
+  }
+
+  .leftContainer {
+    display: flex;
+    min-height: 300px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rightContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F4B919;
+    align-items: center;
+  }
+
+  .titleContainer {
+    display: flex;
+    width: 30%;
+    justify-content: flex-start;
+    align-items: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    background: #F7CE5E;
+    padding: 0.5rem 0.5rem;
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .valueContainer {
+    display: flex;
+    width: 70%;
+    justify-content: flex-start;
+    align-items: center;
+    background: #F7CE5E;
+    padding: 0.5rem 0.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+
+    & a {
+      text-decoration: none;
+    }
+  }
+
+
+}
+
+.inputToken {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+
+  & input {
+    background-color: map-get($map: v.$colors, $key: gray);
+    color: map-get($map: v.$colors, $key: white);
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    border: none;
+    width: 60%;
+    text-align: center;
+
+    &::-webkit-input-placeholder {
+      color: #ccc;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    &::-moz-placeholder {
+      color: #ccc;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    &:-ms-input-placeholder {
+      color: #ccc;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    &::placeholder {
+      color: #ccc;
+      font-size: 2rem;
+      font-weight: bold;
+      opacity: 0.3;
+      padding-left: 0.5rem;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.buttonBuy {
+  width: 14rem;
+  height: 4rem;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  border: 1px solid #F4B919;
+}
+
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5rem;
+}
+
+.container__item {
+  display: inline-flex;
+  margin: 0.3rem 0;
+}

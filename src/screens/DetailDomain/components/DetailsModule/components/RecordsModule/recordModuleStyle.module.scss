@@ -1,0 +1,84 @@
+@use '//src/scss/fonts' as *;
+
+.titleRecord {
+  background-color: #ffb502;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.recordContainer {
+  background-color: #f9e6b3;
+}
+
+.fontTitle {
+  @extend %fontOverPassBold;
+}
+
+.fontSubTitle {
+  @extend %fontOverPass;
+  border-bottom: 1px dashed #f20;
+  display: flex;
+  justify-content: space-between;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2.5rem;
+}
+
+.addressDetail {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 2.5rem;
+}
+
+.inputAddress {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.buttonAddress {
+  margin-left: 1rem;
+}
+
+.typeAddress {
+  @extend %fontOverPass;
+  font-weight: 600;
+  min-width: 15rem;
+}
+
+.theAddress {
+  @extend %fontOver;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.iconMore {
+  cursor: pointer;
+  color: #05387f;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 576px) {
+  .addressDetail {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem;
+    & svg {
+      margin-top: 0.5rem;
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@use '//src/scss/variables.scss' as v;
+
+.fontSmall {
+  font-size: 0.6rem;
+}
+
+.noSelected {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.menu {
+  background-color: map-get($map: v.$colors, $key: dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  min-height: 20rem;
+  color: map-get($map: v.$colors, $key: primary);
+}
+
+.select {
+  width: 80%;
+  align-self: center;
+}
+
+.bodyContent {
+  padding: 1rem 1.5rem;
+  background-color: map-get($map: v.$colors, $key: primary);
+  min-height: 20rem;
+}
+
+// background-color: map-get($map: v.$colors, $key: lightPrimary);
+.bodyDetail {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.domainBarContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.isButton {
+  min-height: 2.5rem;
+  min-width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @extend .noSelected;
+}
+
+.isButtonActive {
+  background-color: map-get($map: v.$colors, $key: black);
+  color: map-get($map: v.$colors, $key: primary);
+}
+
+.isButtonInactive {
+  background-color: transparent;
+  border: 2px solid;
+  border-color: map-get($map: v.$colors, $key: primary);
+  color: map-get($map: v.$colors, $key: primary);
+}
+
+.switchModule {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .bodyContent {
+    width: 100%;
+  }
+
+  .aboutContent {
+    width: 90%;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(10rem, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .bodyDetail {
+    flex-direction: column;
+    padding: 1rem 1.3rem 1rem 1.2rem;
+  }
+
+  .aboutContent {
+    width: 90%;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(10rem, 1fr));
+  }
+  .isButton {
+    min-width: 33%;
+  }
+}

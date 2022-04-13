@@ -1,0 +1,39 @@
+@use '//src/scss/variables.scss'as v;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  min-height: 10rem;
+  background-color: map-get($map: v.$colors, $key: primary);
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__network {
+    margin: 0 2rem;
+    font-size: 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+.icons {
+  justify-content: center;
+  margin-right: 5rem;
+}
+
+@media (max-width: 420px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  svg {
+    width: 100px;
+    height: 60px;
+  }
+}

@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+
+    font-family: -apple-system, Overpass, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background: rgb(240, 246, 250);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+input {
+    width: 400px;
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+button {
+    width: 20rem;
+    padding: 2.5rem;
+}

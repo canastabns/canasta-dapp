@@ -1,0 +1,36 @@
+.domainName {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.copySuccess {
+  top: -1.5rem;
+  right: -2rem;
+  position: absolute;
+  font-size: 1.2rem;
+  color: green;
+}
+.iconFav {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.buttonCopy {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .domainName {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .domainName {
+    margin-bottom: 8px;
+    justify-content: flex-start;
+  }
+}

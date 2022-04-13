@@ -1,0 +1,111 @@
+@use 'fonts'as *;
+@use 'variables'as v;
+
+
+html {
+  font-size: $font-size;
+  @extend %fontOver;
+}
+
+html,
+#root,
+body {
+  height: 100%;
+}
+
+.form-select:focus {
+  border-color: #060d180d;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(4 4 4 / 6%);
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bababa2e;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(74 74 74 / 8%);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+
+.stakingTabs {
+  width: 100%;
+
+  & .ant-tabs,
+  .ant-tabs-nav-list {
+    width: 100%;
+  }
+
+  .ant-tabs-tab {
+    width: 50%;
+    background: map-get($map: v.$colors, $key: lightPrimary);
+    color: map-get($map: v.$colors, $key: dark);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    .ant-tabs-tab-btn {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    &.ant-tabs-tab-active .ant-tabs-tab-btn {
+      width: 100%;
+      color: map-get($map: v.$colors, $key: dark);
+      background: map-get($map: v.$colors, $key: primary);
+    }
+  }
+
+  .ant-tabs-ink-bar {
+    background: map-get($map: v.$colors, $key: dark);
+  }
+
+}
+
+.baseInput {
+  background-color: map-get($map: v.$colors, $key: gray);
+  color: map-get($map: v.$colors, $key: white);
+  font-weight: 500;
+  border-radius: 1.5rem;
+  border: none;
+
+  &::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &::-moz-placeholder {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &:-ms-input-placeholder {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &::placeholder {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0.3;
+    padding-left: 0.5rem;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.baseButton {
+  width: 100%;
+  height: 5rem;
+  font-size: 1.5rem;
+}

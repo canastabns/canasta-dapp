@@ -1,0 +1,40 @@
+.menuOptionContainer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  .menuIconContainer {
+    display: flex;
+    width: (5rem / 100%) * 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menuTextContainer {
+    display: flex;
+    width: calc(100% - 5rem);
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.375rem;
+  }
+
+  @media (max-width: 1428px) {
+    .menuIconContainer {
+      width: (3rem / 100%) * 100%;
+    }
+
+    .menuTextContainer {
+      width: calc(100% - 3rem);
+      font-size: 1.175rem;
+      justify-content: center;
+    }
+  }
+}

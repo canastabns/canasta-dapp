@@ -1,0 +1,41 @@
+.tabs {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  background: #0F1320;
+  width: 100%;
+  height: 100%;
+
+  &__header {
+    display: flex;
+    margin-left: 4rem;
+  }
+
+  &__title {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 1rem 1rem;
+    margin: 0 0.2rem;
+    color: #fff;
+    background: #6E6F73;
+    cursor: pointer;
+
+    &_active {
+      background: #0F1320;
+      color: #F4B919;
+    }
+  }
+
+  &__content {
+    height: 100%;
+  }
+
+  &__hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,187 @@
+@use '//src/scss/variables.scss' as v;
+
+.fontSmall {
+  font-size: 0.6rem;
+}
+
+.noSelected {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.selectTime {
+  display: flex;
+  flex-direction: column;
+  width: (22rem / 100%) * 100%;
+
+  align-items: center;
+  position: relative;
+  margin-right: 0.5rem;
+
+  .legendTimeContainer {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    border-top: 1px solid;
+
+    .legendTime {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+    }
+  }
+}
+
+.middleIconContainer {
+  display: flex;
+  width: (3rem / 100%) * 100%;
+  height: 59px;
+  margin-right: 0.5rem;
+}
+
+.subBody {
+  background-color: map-get($map: v.$colors, $key: lightPrimary);
+  display: flex;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
+}
+
+.buttonNotifyMe {
+  width: 12rem;
+  height: 2.3rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1.5rem;
+  margin-left: 0.5rem;
+  align-items: center;
+  font-size: 0.9rem;
+  border-radius: 1rem;
+  background-color: map-get($map: v.$colors, $key: black);
+  color: map-get($map: v.$colors, $key: primary);
+  cursor: pointer;
+  @extend .noSelected;
+}
+
+.buttonRequestDomain {
+  width: 20rem;
+}
+
+.selectQuantity,
+.totalEstimated {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.totalEstimated {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.amountRowSecond {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  border-top: 1px solid;
+}
+
+.amountInCrypto {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 260px);
+  position: relative;
+  align-items: center;
+
+}
+
+.amountUsd {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+.amountRowOne {
+  font-size: 1.2rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+
+.legendAmount {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.legendFav {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media (max-width: 110px) {
+  .amountInCrypto {
+    margin-left: 0;
+
+    .amountUsd {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .selectQuantity {
+    flex-direction: column;
+  }
+
+  .selectTime {
+    display: flex;
+    width: 100%;
+  }
+  .amountInCrypto {
+    width: 100%;
+    margin-top: 2rem;
+
+    .amountUsd {
+      font-size: 1.375rem;
+    }
+  }
+  .middleIconContainer {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .amountRowOne {
+    font-size: 1rem;
+  }
+  .amountInCrypto {
+    margin-left: 0;
+
+    .amountUsd {
+      font-size: 1rem;
+    }
+  }
+  .legendFav {
+    font-size: 0.9rem;
+  }
+}
+
+.priceRow {
+  display: flex;
+  width: 100%;
+  height: 35px;
+  align-items: center;
+}

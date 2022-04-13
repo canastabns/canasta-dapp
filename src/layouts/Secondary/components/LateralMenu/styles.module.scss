@@ -1,0 +1,25 @@
+@use '//src/scss/fonts' as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  @extend %fontOver;
+}
+
+.lateralMenuOption {
+  display: flex;
+  width: 80%;
+  align-self: center;
+  height: 5rem;
+  margin-bottom: 2rem;
+  @extend %fontOver;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 98%;
+  }
+  .lateralMenuOption {
+    width: 100%;
+  }
+}

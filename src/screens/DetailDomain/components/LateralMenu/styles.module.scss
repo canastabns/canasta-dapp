@@ -1,0 +1,22 @@
+@use '//src/scss/variables.scss' as v;
+@use '//src/scss/fonts' as *;
+
+.container {
+  background-color: map-get($map: v.$colors, $key: dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1rem;
+  min-height: 20rem;
+  color: map-get($map: v.$colors, $key: primary);
+  @extend %fontOver;
+}
+
+.lateralMenuOption {
+  display: flex;
+  width: 80%;
+  align-self: center;
+  height: 5rem;
+  margin-bottom: 2rem;
+  @extend %fontOver;
+}

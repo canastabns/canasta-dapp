@@ -1,0 +1,92 @@
+@use '//src/scss/variables.scss' as v;
+.step {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(15rem, auto);
+}
+
+.stepSubBody {
+  background-color: map-get($map: v.$colors, $key: lightPrimary);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1rem;
+  width: 80%;
+}
+.stepDetail {
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+.titleEnum {
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  align-items: center;
+  font-weight: 600;
+}
+.bodyEnum {
+  width: 10%;
+  justify-content: center;
+  display: flex;
+}
+.enum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  border-radius: 3rem;
+  height: 3rem;
+  width: 3rem;
+}
+
+@media (max-width: 768px) {
+  .bodyEnum {
+    width: 20%;
+  }
+
+  .selectQuantity {
+    flex-direction: column;
+  }
+  .bodyEnum {
+    width: 10%;
+  }
+  .selectTime {
+    display: flex;
+    width: 100%;
+  }
+  .amountInCrypto {
+    width: 100%;
+    margin-top: 2rem;
+
+    .amountUsd {
+      font-size: 1.3rem;
+    }
+  }
+  .middleIconContainer {
+    display: none;
+  }
+
+  .step {
+    gap: 0rem;
+    grid-template-columns: repeat(1, minmax(10rem, 1fr));
+  }
+}
+
+@media (max-width: 400px) {
+  .amountInCrypto {
+    margin-left: 0;
+
+    .amountUsd {
+      font-size: 1rem;
+    }
+  }
+}

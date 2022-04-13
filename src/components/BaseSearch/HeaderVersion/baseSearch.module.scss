@@ -1,0 +1,141 @@
+@use '//src/scss/variables.scss'as v;
+@use '//src/scss/fonts'as *;
+
+$asset: "//src/assets";
+
+.searchFormContainer {
+  display: flex;
+  position: relative;
+  min-width: 95%;
+  height: 7rem;
+  border: 0.3rem solid;
+  border-color: map-get($map: v.$colors, $key: primary);
+  border-radius: 1.5rem;
+  background-color: #fff;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.searchFormContainer::before {
+  content: "";
+  position: absolute;
+  left: 1.5rem;
+  top: 30%;
+  width: 2rem;
+  height: 4rem;
+  background: url('../../../assets/svg/search-icon.svg') no-repeat;
+  background-size: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  border-radius: 1.5rem 0 0 1.5rem;
+  padding: 2.5rem 0 2rem 5rem;
+  border: none;
+  @extend %fontOver;
+  font-size: 1rem;
+  font-weight: 100;
+  color: #ccc;
+  background-color: rgb(85, 85, 85);
+
+  &::-webkit-input-placeholder {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+    @extend %fontOver;
+  }
+
+  &::-moz-placeholder {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &:-ms-input-placeholder {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  &::placeholder {
+    color: #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0.3;
+    padding-left: 0.5rem;
+  }
+
+  & :focus {
+    outline: none;
+  }
+}
+
+.searchButton {
+  border-radius: 0 1.5rem 1.5rem 0;
+  background: map-get($map: v.$colors, $key: primary);
+  color: map-get($map: v.$colors, $key: dark);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  width: 16rem;
+  height: 90%;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .searchContainer {
+    width: 100%;
+  }
+
+  .searchFormContainer {
+    height: 5rem;
+    display: flex;
+    background: map-get($map: v.$colors, $key: primary);
+  }
+
+  .searchInput {
+    padding: 2rem 0 2rem 5rem;
+  }
+
+  .searchInput::placeholder {
+    font-size: 1rem;
+  }
+
+  .searchFormContainer::before {
+    left: 1.2rem;
+    top: 22%;
+    width: 1.7rem;
+    height: 4rem;
+    background: url(#{$asset}/svg/search-icon.svg) no-repeat;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .searchFormContainer {}
+
+  .searchButton {
+    margin-top: 0.5rem;
+    width: 11.5rem;
+    font-size: 0.8rem;
+  }
+
+  .searchInput {
+    padding: 2rem 0 2rem 0.5rem;
+  }
+
+  .searchInput::placeholder {
+    opacity: 0.3;
+    font-size: 1.2rem;
+    padding-left: 3rem;
+  }
+
+  .searchFormContainer::before {
+    left: 1rem;
+    top: 1.3rem;
+    width: 1.5rem;
+    height: 2rem;
+  }
+}

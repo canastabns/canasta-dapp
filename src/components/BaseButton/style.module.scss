@@ -1,0 +1,35 @@
+@use '//src/scss/variables.scss' as v;
+
+.fontSmall {
+  font-size: 0.6rem;
+}
+
+.noSelected {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.button {
+  min-width: 12rem;
+  height: 2.3rem;
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5rem 1.5rem;
+  align-items: center;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background-color: map-get($map: v.$colors, $key: black);
+  color: map-get($map: v.$colors, $key: primary);
+  cursor: pointer;
+  @extend .noSelected;
+}
+
+.buttonDisabled {
+  background-color: map-get($map: v.$colors, $key: disabledGray);
+  color: map-get($map: v.$colors, $key: white);
+  cursor: pointer;
+  border-color: map-get($map: v.$colors, $key: disabledGray);
+}

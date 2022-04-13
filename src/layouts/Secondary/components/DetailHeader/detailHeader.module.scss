@@ -1,0 +1,79 @@
+@use '//src/scss/variables.scss' as v;
+
+.main {
+  width: 100%;
+  background-color: map-get($map: v.$colors, $key: dark);
+}
+.logoHeader {
+  width: 25rem;
+  height: 4rem;
+}
+
+.headerContainer {
+  display: flex;
+  width: 80%;
+  height: 15rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.searchComponent {
+  width: 90%;
+}
+.searchHeader {
+  display: flex;
+  justify-content: flex-end;
+}
+.iconBurger {
+  position: relative;
+  display: none;
+}
+@media (max-width: 768px) {
+  .iconBurger {
+    display: flex;
+  }
+  .headerContainer {
+    width: 100%;
+    padding-left: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .searchHeader {
+    padding-left: 0.5rem;
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+    width: 100% !important;
+  }
+  .myMenu {
+    width: 300px;
+    background-color: map-get($map: v.$colors, $key: dark);
+    color: #fff;
+    & a {
+      color: #fff;
+      text-decoration: none;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 8px;
+      padding-left: 1rem;
+      &:hover {
+        color: #ccc;
+        background-color: rgb(7, 20, 36);
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .searchComponent {
+    width: 95%;
+  }
+  .iconBurger {
+    width: 100%;
+    > div {
+      width: 100%;
+    }
+    > div {
+      position: relative;
+    }
+  }
+}

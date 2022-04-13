@@ -1,0 +1,13 @@
+.link {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  &:link {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+}

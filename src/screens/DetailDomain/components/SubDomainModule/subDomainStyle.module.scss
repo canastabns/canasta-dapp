@@ -1,0 +1,28 @@
+@use '//src/scss/variables.scss' as v;
+
+.fontSmall {
+  font-size: 0.6rem;
+}
+
+.noSelected {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.subBody {
+  background-color: map-get($map: v.$colors, $key: lightPrimary);
+  display: flex;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  min-height: 45vh;
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+}

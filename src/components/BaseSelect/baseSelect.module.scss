@@ -1,0 +1,45 @@
+@use '//src/scss/variables.scss' as v;
+
+.containerSelect {
+  cursor: pointer;
+  color: map-get(v.$colors, primary);
+  min-width: 100%;
+  box-shadow: none;
+  border-width: 3px;
+  border-style: solid;
+  border-color: map-get(v.$colors, primary);
+  border-radius: 2rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.selectButton {
+  background-color: transparent;
+  color: map-get(v.$colors, primary);
+  border: none;
+  min-width: 80%;
+  overflow: hidden;
+  &:focus-visible {
+    outline: none;
+  }
+  &:focus,
+  &:hover {
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
+  }
+  &:after {
+    content: "▾";
+    position: absolute;
+    top: 0;
+    right: 1.2rem;
+    z-index: 1;
+    color: #000;
+    line-height: 4rem;
+    font-size: 1.4rem;
+    .ie & {
+      display: none;
+    }
+  }
+}

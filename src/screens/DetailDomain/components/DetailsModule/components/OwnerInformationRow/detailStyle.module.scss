@@ -1,0 +1,99 @@
+@use '//src/scss/variables.scss' as v;
+
+.copyContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 10rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+.copySuccess {
+  color: green;
+}
+.iconFav {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.buttonCopy {
+  cursor: pointer;
+}
+
+.ownerInformationContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0 1rem 0;
+  font-size: 1.2rem;
+
+  .ownerTitleContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-weight: bold;
+    text-transform: uppercase;
+    flex: 0.2;
+  }
+
+  .ownerInformationValueContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex: 0.5;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    a {
+      color: black;
+    }
+  }
+
+  .ownerActionContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 0.3;
+  }
+}
+
+@media (max-width: 768px) {
+  .ownerInformationContainer {
+    display: flex;
+    flex-direction: column;
+
+    .ownerTitleContainer {
+      flex: 1;
+    }
+
+    .ownerInformationValueContainer {
+      flex: 1;
+      margin-top: 0.5rem;
+    }
+
+    .ownerActionContainer {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex: 1;
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.alternativeCopy {
+  display: none;
+}
+@media (max-width: 400px) {
+  .alternativeCopy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+  }
+  .ownerInformationContainer {
+    font-size: 1rem;
+  }
+}
+

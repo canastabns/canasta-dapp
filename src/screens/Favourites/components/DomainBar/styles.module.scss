@@ -1,0 +1,36 @@
+@use '//src/scss/variables.scss' as v;
+
+.container {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  background-color: map-get($map: v.$colors, $key: lightPrimary);
+  margin-bottom: 2rem;
+
+  .leftContainer {
+    display: flex;
+    width: 70%;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    cursor: pointer;
+  }
+
+  .middleContainer {
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    opacity: 0.5;
+    cursor: pointer;
+  }
+
+  .rightContainer {
+    display: flex;
+    width: 15%;
+    justify-content: center;
+    align-items: center;
+  }
+}
