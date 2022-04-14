@@ -16,7 +16,10 @@ function BoxOne() {
         <Translate value={'homeScreen.boxOne.content'} />
       </div>
       <div className={styles.footer}>
-        <div className={styles.button}>
+        <div
+          className={styles.button}
+          onClick={() => window.open('https://blog.canasta.domains/', '_blank') }
+        >
           <Translate value={'homeScreen.boxOne.learnMore'} />
         </div>
       </div>

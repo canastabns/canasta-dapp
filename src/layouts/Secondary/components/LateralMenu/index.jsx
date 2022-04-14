@@ -38,7 +38,7 @@ const LateralMenu = () => {
 
       <div className={styles.lateralMenuOption}>
         <BaseLateralOption
-          onClick={() => window.location.href = 'https://medium.com/canasta'}
+          onClick={() => window.location.href = 'https://blog.canasta.domains/'}
           Icon={<CommentIcon width={25} height={25} />}
           text="detailPage.menu.faq"
         />

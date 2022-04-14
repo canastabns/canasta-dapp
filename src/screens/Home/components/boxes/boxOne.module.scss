@@ -29,6 +29,7 @@
   display: flex;
   justify-content: flex-end;
 }
+
 .button {
   display: flex;
   justify-content: center;
@@ -38,7 +39,10 @@
   width: 15rem;
   height: 4rem;
   color: #fff;
+  cursor: pointer;
 }
+
+
 .bgHash {
   position: absolute;
   width: 90%;
