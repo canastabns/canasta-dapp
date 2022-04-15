@@ -64,5 +64,8 @@ export const english = {
       buyToken: 'Buy Canasta Token',
       stakingToken: 'Stake $CNST for more $CNST'
     }
+  },
+  global: {
+    buyToken: 'Buy tokens'
   }
 };

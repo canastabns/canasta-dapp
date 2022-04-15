@@ -1,4 +1,4 @@
-@use "../../../../scss/variables.scss" as v;
+@use '//src/scss/variables.scss' as v;
 
 .headerContainer {
   display: flex;
@@ -35,6 +35,8 @@
   justify-content: center;
   width: 70%;
   align-self: center;
+
+  grid-gap: 1rem;
 }
 
 .headerMiddleContainer {
@@ -93,4 +95,24 @@
   .menuOption {
     justify-content: center;
   }
+}
+
+.primaryButton {
+  cursor: pointer;
+  color: map-get(v.$colors, primary);
+  min-width: 100%;
+  padding: 1.4rem 0;
+  border-style: solid;
+  border-color: map-get(v.$colors, primary);
+  border-radius: 2rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  a {
+    color: map-get(v.$colors, primary);
+    text-transform: uppercase;
+  }
+  text-transform: uppercase;
 }

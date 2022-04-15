@@ -1,3 +1,4 @@
+import BaseButton from 'components/BaseButton';
 import BaseChangeLanguage from 'components/BaseChangeLanguage';
 import BaseConnect from 'components/BaseConnect';
 import BaseLink from 'components/BaseLink';
@@ -35,6 +36,12 @@ function Header() {
           */}
         </div>
         <div className={styles.connectButtonContainer}>
+          <BaseButton
+            text={'global.buyToken'}
+            className={styles.primaryButton}
+            onClick={() => window.location.href = 'https://app.canasta.domains/tokens' }
+          />
+            
           <BaseChangeLanguage />
         </div>
       </div>
