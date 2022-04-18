@@ -1,4 +1,4 @@
-import {ReactComponent as LogoEth} from 'assets/svg/icon-eth.svg';
+import {ReactComponent as LogoBNB} from 'assets/svg/icon-bnb.svg';
 import {Translate} from 'react-redux-i18n';
 
 import styles from './boxOne.module.scss';
@@ -7,7 +7,7 @@ function BoxOne() {
   return (
     <div className={styles.body}>
       <div className={styles.title}>
-        <LogoEth width={120}/>
+        <LogoBNB width={120}/>
         <div className={styles.textTitle} >
           <Translate value={'homeScreen.boxOne.title'} />
         </div>
