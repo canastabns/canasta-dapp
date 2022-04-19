@@ -1,4 +1,5 @@
 import {Fragment} from 'react';
+import {Translate} from 'react-redux-i18n';
 
 import SecondaryLayout from 'layouts/Secondary';
 import LateralMenu from 'layouts/Secondary/components/LateralMenu';
@@ -38,7 +39,7 @@ const DetailDomainContainer = (props) => {
                         onClick={() => row.onClick(index)}
                         className={`${styles.isButton} ${props.activeTab === index ? styles.isButtonActive : styles.isButtonInactive}`}
                       >
-                        {row.label}
+                        <Translate value={row.label} />
                       </div>
                     )}
                   </Fragment>

@@ -18,6 +18,11 @@ export const english = {
     placeHolder: 'Search names or addresses'
   },
   detailPage: {
+    tabs: {
+      register: 'register',
+      details: 'details',
+      subdomains: 'subdomains'
+    },
     stepsRegister: {
       step1: {
         title: 'Request Register',

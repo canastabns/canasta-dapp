@@ -31,19 +31,19 @@ const Details = (props) => {
       {
         show: false,
         onClick: i => setActiveTab(i),
-        label: 'Registrar',
+        label: 'detailPage.tabs.register',
         Component: RegisterModule
       },
       {
         show: true,
         onClick: i => setActiveTab(i),
-        label: 'Detalles',
+        label: 'detailPage.tabs.details',
         Component: DetailsModule
       },
       {
         show: false,
         onClick: i => setActiveTab(i),
-        label: 'Subdominios',
+        label: 'detailPage.tabs.subdomains',
         Component: SubDomainModule
       }
     ]);
