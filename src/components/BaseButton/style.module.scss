@@ -1,4 +1,4 @@
-@use '//src/scss/variables.scss' as v;
+@use '//src/scss/variables.scss'as v;
 
 .fontSmall {
   font-size: 0.6rem;
@@ -25,6 +25,7 @@
   color: map-get($map: v.$colors, $key: primary);
   cursor: pointer;
   @extend .noSelected;
+  transition: all .2s ease-in-out;
 }
 
 .buttonDisabled {
@@ -32,4 +33,18 @@
   color: map-get($map: v.$colors, $key: white);
   cursor: pointer;
   border-color: map-get($map: v.$colors, $key: disabledGray);
+}
+
+.activeMe {
+  border: 2px solid #fff;
+  padding: 2rem;
+  width: auto;
+  height: 5rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+
+  & span {
+    text-align: center;
+    text-transform: uppercase;
+  }
 }

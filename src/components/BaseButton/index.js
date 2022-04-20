@@ -9,7 +9,7 @@ import styles from './style.module.scss';
 const BaseButton = props => (
   <div
     
-    className={`${styles.button} ${props.className} ${props.disabled && styles.buttonDisabled}`}
+    className={`${styles.button} ${props.className} ${props.disabled && styles.buttonDisabled} ${props.isCompleted && styles.activeMe} `}
     onClick={props.disabled || props.isLoading ? () => {} : props.onClick}
   >
     {props.isLoading ? 
@@ -25,7 +25,8 @@ BaseButton.propTypes = {
   disabled: PropTypes.bool,
   text: PropTypes.string,
   className: PropTypes.string,
-  isLoading: PropTypes.bool
+  isLoading: PropTypes.bool,
+  isCompleted: PropTypes.bool
 };
 
 BaseButton.defaultProps = {
@@ -33,7 +34,8 @@ BaseButton.defaultProps = {
   disabled: false,
   text: 'Default text',
   className: '',
-  isLoading: false
+  isLoading: false,
+  isCompleted: false
 };
 
 export default BaseButton;

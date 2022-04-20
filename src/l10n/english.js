@@ -39,6 +39,7 @@ export const english = {
     },
     registerModule: {
       requestRegistration: 'Registration request',
+      finishRegistration: 'Click here to Finish register',
       legendTimeContainer: 'Registration Period',
       amountAtLeast: 'at least',
       estimateTotalGas: 'Estimated total (price+gas). The gas price is based at 8 Gwei',

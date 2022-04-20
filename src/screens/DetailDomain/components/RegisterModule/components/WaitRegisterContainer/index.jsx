@@ -41,7 +41,8 @@ const WaitRegisterContainer = (props) => {
           onClick={props.register}
           disabled={(prog !== 100 || disabledButtonRegister)}
           isLoading={props.registerBegin}
-          text={'detailPage.registerModule.requestRegistration'}
+          text={prog !== 100 ? 'detailPage.registerModule.requestRegistration': 'detailPage.registerModule.finishRegistration'}
+          isCompleted={prog === 100}
         />
       </div>
     </>
