@@ -1,4 +1,3 @@
-import BaseLink from 'components/BaseLink/index2';
 import {useDispatch, useSelector} from 'react-redux';
 import {Translate} from 'react-redux-i18n';
 import * as walletActions from 'redux/actions/walletActions';

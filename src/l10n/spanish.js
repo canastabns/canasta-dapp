@@ -21,7 +21,8 @@ export const spanish = {
     tabs: {
       register: 'registrar',
       details: 'detalles',
-      subdomains: 'subdominios'
+      subdomains: 'subdominios',
+      myDomains: 'Mis dominios'
     },
     stepsRegister: {
       step1: {
@@ -51,7 +52,8 @@ export const spanish = {
       favourites: 'Favoritos',
       faq: 'FAQ',
       about: 'Nosotros',
-      staking: 'Staking'
+      staking: 'Staking',
+      myDomains: 'Mis dominios'
     }
   },
   favouritesScreen: {
@@ -73,5 +75,9 @@ export const spanish = {
   },
   global: {
     buyToken: 'Comprar Tokens'
+  },
+  myDomains: {
+    title: 'Dominios',
+    notFoundText: 'Nombres no encontrados'
   }
 };

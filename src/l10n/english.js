@@ -21,7 +21,8 @@ export const english = {
     tabs: {
       register: 'register',
       details: 'details',
-      subdomains: 'subdomains'
+      subdomains: 'subdomains',
+      myDomains: 'My Domains'
     },
     stepsRegister: {
       step1: {
@@ -51,7 +52,8 @@ export const english = {
       favourites: 'Favourites',
       faq: 'FAQ',
       about: 'About us',
-      staking: 'Staking'
+      staking: 'Staking',
+      myDomains: 'My domains'
     }
   },
   favouritesScreen: {
@@ -73,5 +75,9 @@ export const english = {
   },
   global: {
     buyToken: 'Buy tokens'
+  },
+  myDomains: {
+    title: 'Domains',
+    notFoundText: 'Domains not found'
   }
 };
