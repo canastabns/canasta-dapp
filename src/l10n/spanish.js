@@ -39,6 +39,7 @@ export const spanish = {
     },
     registerModule: {
       requestRegistration: 'Peticion de registro',
+      finishRegistration: 'Haga clic aquí para finalizar su registro',
       legendTimeContainer: 'Periodo de Registracion',
       amountAtLeast: 'por lo menos',
       estimateTotalGas: 'Total estimado (precio + gas). El precio del gas se basa en 8 Gwei.',
