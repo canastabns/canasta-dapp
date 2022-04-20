@@ -30,7 +30,7 @@ function MainLayout (props) {
           </div>
 
         </div>
-        <div className={styles.main__footer}>© 2022 Canasta binance name service</div>
+        <div className={styles.main__footer}>©2022 Canasta </div>
 
       </div>
     </BaseLayout>

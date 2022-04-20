@@ -1,11 +1,11 @@
-@use '//src/scss/variables.scss' as v;
+@use '//src/scss/variables.scss'as v;
 
 .containerSelect {
   cursor: pointer;
   color: map-get(v.$colors, primary);
   min-width: 100%;
   box-shadow: none;
-  border-width: 3px;
+  border-width: 2px;
   border-style: solid;
   border-color: map-get(v.$colors, primary);
   border-radius: 2rem;
@@ -22,13 +22,16 @@
   border: none;
   min-width: 80%;
   overflow: hidden;
+
   &:focus-visible {
     outline: none;
   }
+
   &:focus,
   &:hover {
     box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.2);
   }
+
   &:after {
     content: "▾";
     position: absolute;
@@ -38,11 +41,13 @@
     color: #000;
     line-height: 4rem;
     font-size: 1.4rem;
+
     .ie & {
       display: none;
     }
   }
 }
+
 select.selectButton {
   position: relative;
   background: none;
@@ -57,21 +62,25 @@ select.selectButton {
   // Removes the default select arrow.
   text-overflow: "";
   text-indent: 0.5rem;
+
   // End of brutal hack
   & options {
     position: absolute;
     top: 1rem;
     margin-top: 3rem;
   }
+
   & option {
     background: rgba(19, 24, 33, 0.9);
     border: 2px solid #f20;
     outline: 2px solid #f20;
   }
+
   &:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #888888;
   }
+
   &::-ms-expand {
     display: none;
   }

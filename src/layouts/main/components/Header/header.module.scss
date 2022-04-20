@@ -1,4 +1,4 @@
-@use '//src/scss/variables.scss' as v;
+@use '//src/scss/variables.scss'as v;
 
 .headerContainer {
   display: flex;
@@ -68,21 +68,26 @@
     width: 95%;
   }
 }
+
 @media (max-width: 576px) {
   .headerLeftContainer {
     display: none;
   }
+
   .headerContainer {
     padding-top: 1.5rem;
   }
+
   .headerRightContainer {
     width: 100%;
     align-items: center;
   }
+
   .connectTextContainer {
     width: 50%;
     justify-content: space-around;
   }
+
   .connectButtonContainer {
     width: 60%;
   }
@@ -102,6 +107,7 @@
   color: map-get(v.$colors, primary);
   min-width: 100%;
   padding: 1.4rem 0;
+  border-width: 2px;
   border-style: solid;
   border-color: map-get(v.$colors, primary);
   border-radius: 2rem;
@@ -110,9 +116,11 @@
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
+
   a {
     color: map-get(v.$colors, primary);
     text-transform: uppercase;
   }
+
   text-transform: uppercase;
 }
