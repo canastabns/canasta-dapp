@@ -16,11 +16,11 @@ function Container(props) {
       <SearchContent />
       <div className={styles.body}>
         <div className={styles.aboutContent}>
-          <div className={`${styles.aboutBoxContainer} ${styles.orange}`}>
+          <div className={`${styles.aboutBoxContainer} ${styles.orange} ${styles.border__top_left}`}>
             <BoxOne/>
           </div>
 
-          <div className={`${styles.aboutBoxContainer} ${styles.orange}`}>
+          <div className={`${styles.aboutBoxContainer} ${styles.orange} ${styles.border__top_right}`}>
             <BoxTwo/>
           </div>
         </div>
