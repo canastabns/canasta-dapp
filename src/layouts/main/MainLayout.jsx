@@ -25,7 +25,7 @@ function MainLayout (props) {
           </div>
           <div className={styles.socials__network}>
             <div><a href={'https://twitter.com/CanastaDomains'} target={'_blank'} rel="noreferrer" > Twitter </a> </div>
-            <div><a href={'https://github.com/canastabns/canasta-dapp'} target={'_blank'} rel="noreferrer" >Github </a></div>
+            <div><a href={'https://github.com/canastabns'} target={'_blank'} rel="noreferrer" >Github </a></div>
             <div><a href={'https://blog.canasta.domains/'} target={'_blank'} rel="noreferrer" >Medium </a></div>
           </div>
 
