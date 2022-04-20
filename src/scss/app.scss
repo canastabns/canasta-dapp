@@ -8,9 +8,10 @@ html {
 }
 
 html,
-#root,
 body {
-  height: 100%;
+  height: auto;
+  width: calc(100%);
+  max-width: calc(100vw);
 }
 
 .form-select:focus {

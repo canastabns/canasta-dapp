@@ -1,4 +1,4 @@
-@use "../../scss/variables.scss" as v;
+@use "../../scss/variables.scss"as v;
 
 .searchContainer {
   margin: 0 auto;
@@ -31,6 +31,14 @@
 
 .orange {
   background-color: map-get($map: v.$colors, $key: primary);
+}
+
+.border__top_left {
+  border-top-left-radius: 5rem;
+}
+
+.border__top_right {
+  border-top-right-radius: 5rem;
 }
 
 @media (max-width: 900px) {
