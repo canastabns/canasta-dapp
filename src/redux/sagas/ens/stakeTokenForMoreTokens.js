@@ -74,7 +74,7 @@ export function* approveForTokenForMoreToken({payload}) {
       cnstContract
     } = yield setupENS();
 
-    yield cnstContract.approve();
+    yield cnstContract.approve(CONTRACTS_ADDRESSES.StakeForMoreTokens);
     const isAllowance = yield cnstContract.isAllowance(payload.address, CONTRACTS_ADDRESSES.StakeForMoreTokens);
 
     yield put({

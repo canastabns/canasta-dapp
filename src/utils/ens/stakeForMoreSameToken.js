@@ -1,4 +1,4 @@
-import Web3Utils from 'web3-utils';
+import Web3 from 'web3';
 
 import * as Web3Interface from 'utils/web3';
 import {CONTRACTS_ADDRESSES} from './address';
@@ -30,6 +30,6 @@ export class StakeForMoreSameToken {
 
   async createStake(amount) {
     const accounts = await Web3Interface.getAccounts();
-    return this.contact.createStake(Web3Utils.toBN(amount)).send({ from: accounts[0] });
+    return this.contact.createStake(Web3.utils.toWei(`${amount}`, 'ether')).send({ from: accounts[0] });
   }
 }

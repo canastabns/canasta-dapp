@@ -36,7 +36,7 @@ const ContainerStakingToken = (props) => {
                 onClick={props.createStakeHandler}
                 className={styles.buttonBuy}
                 text={'Stake'}
-            
+                isLoading={props.createStakeIsLoading}
               />
             )}
 

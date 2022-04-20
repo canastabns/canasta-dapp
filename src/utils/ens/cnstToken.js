@@ -24,10 +24,10 @@ export class CNSTContract {
     return this.contract.balanceOf(address).call();
   }
 
-  async approve() {
+  async approve(spenser) {
     const accounts = await Web3Interface.getAccounts();
     const address = accounts[0];
-    return this.contract.approve(address, Web3Utils.toBN(Number.MAX_SAFE_INTEGER)).send({ from: address });
+    return this.contract.approve(spenser, Web3Utils.toWei(`${Number.MAX_SAFE_INTEGER}`, 'ether')).send({ from: address });
   }
 
   async isAllowance(owner, spender) {
