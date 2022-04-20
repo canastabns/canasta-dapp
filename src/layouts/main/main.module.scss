@@ -1,17 +1,14 @@
 @use "../../scss/variables.scss"as colors;
 
-body,
-html,
-.main {
-  min-height: 100vh;
-  height: 100%;
-}
-
 .main {
   background: url(../../assets/images/background.jpg) 0 0 / cover;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  min-height: 100vh;
+  height: auto;
 
   &__footer {
     background: map-get($map: colors.$colors, $key: "primary");
