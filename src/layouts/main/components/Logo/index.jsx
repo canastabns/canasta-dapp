@@ -1,4 +1,4 @@
-import {ReactComponent as LogoSvg} from 'assets/svg/logo-canasta.svg';
+import {ReactComponent as LogoSvg} from 'assets/svg/canasta-logo-yellow.svg';
 
 import styles from './logo.module.scss';
 

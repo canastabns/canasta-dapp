@@ -1,5 +1,5 @@
 import {ReactComponent as LogoBurger} from 'assets/svg/icon-burger.svg';
-import {ReactComponent as LogoSvgHeader} from 'assets/svg/logo-canasta.svg';
+import {ReactComponent as LogoSvgHeader} from 'assets/svg/canasta-logo-yellow.svg';
 import BaseSearch from 'components/BaseSearch';
 import { slide as Menu } from 'react-burger-menu';
 import { useHistory } from 'react-router-dom';

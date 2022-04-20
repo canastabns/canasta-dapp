@@ -1,4 +1,4 @@
-import {ReactComponent as LogoSvgFooter} from 'assets/svg/logo-row-gray.svg';
+import {ReactComponent as LogoSvgFooter} from 'assets/svg/canasta-logo-white.svg';
 
 import styles from './detailFooter.module.scss';
 
