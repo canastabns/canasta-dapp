@@ -23,6 +23,7 @@ const getDomainsByOwnerAddress = (address) => {
   }, {});
 };
 
+
 function* get({payload}) {
   try {
     const result = yield getDomainsByOwnerAddress(payload.address && payload.address.toLowerCase());
@@ -36,7 +37,7 @@ function* get({payload}) {
 
     if(domains.length > 0 && domainsInStorage.length > 0) {
       domainsInStorage.filter(row => {
-        const find = R.find(R.propEq('name', row.domain))(domains);
+        const find = R.find(R.propEq('name', row.name))(domains);
 
         if(!find)
           domainWithoutIndexed.push({ name: row.name });
