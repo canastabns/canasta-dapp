@@ -1,6 +1,8 @@
 import axios from 'axios';
 import * as R from 'ramda';
 import {put} from 'redux-saga/effects';
+
+import * as LocalStorage from 'utils/commons/localstorage';
 import * as myDomainsConstants from 'redux/constants/myDomains';
 
 const getDomainsByOwnerAddress = (address) => {
@@ -21,15 +23,31 @@ const getDomainsByOwnerAddress = (address) => {
   }, {});
 };
 
-
 function* get({payload}) {
   try {
     const result = yield getDomainsByOwnerAddress(payload.address && payload.address.toLowerCase());
     const domains = R.pathOr([], ['data', 'data', 'domains'], result);
 
+    let domainsInStorage = LocalStorage.getItem('@app/myDomains') || [];
+    let domainWithoutIndexed = [];
+
+    if(R.isEmpty(domainsInStorage) || !domainsInStorage)
+      domainsInStorage = [];
+
+    if(domains.length > 0 && domainsInStorage.length > 0) {
+      domainsInStorage.filter(row => {
+        const find = R.find(R.propEq('name', row.domain))(domains);
+
+        if(!find)
+          domainWithoutIndexed.push({ name: row.name });
+
+        return !find;
+      });
+    }
+
     yield put({
       type: myDomainsConstants.GET_MY_DOMAINS_SUCCESS,
-      payload: domains
+      payload: [...domainWithoutIndexed, ...domains]
     });
   } catch (error) {
     yield put({

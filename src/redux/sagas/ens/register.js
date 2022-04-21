@@ -1,3 +1,4 @@
+import * as R from 'ramda';
 import {put, select} from 'redux-saga/effects';
 import * as ensConstants from 'redux/constants/ens';
 import * as ensSelectors from 'redux/selectors/ensSelector';
@@ -22,6 +23,18 @@ function* register() {
       rentPrices.data.duration,
       commitHashData.secret
     );
+
+    let domainsInStorage = LocalStorage.getItem('@app/myDomains');
+
+    if(R.isEmpty(domainsInStorage) || !domainsInStorage)
+      domainsInStorage = [];
+
+    const exists = commitHashData.domain && domainsInStorage.find(e => e.domain === commitHashData.domain);
+
+    if(commitHashData.domain && !exists)
+      domainsInStorage.push({name: commitHashData.domain});
+
+    LocalStorage.setItem('@app/myDomains', domainsInStorage);
 
     yield put({
       type: ensConstants.REGISTER_SUCCESS,
