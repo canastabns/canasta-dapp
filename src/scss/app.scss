@@ -8,6 +8,10 @@ html {
   @extend %fontOver;
 }
 
+body {
+  font-size: 1.4rem;
+}
+
 #root,
 body {
   height: 100%;

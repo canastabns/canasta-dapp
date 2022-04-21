@@ -19,7 +19,7 @@ export const english = {
   },
   detailPage: {
     tabs: {
-      register: 'register',
+      register: 'domain',
       details: 'details',
       subdomains: 'subdomains',
       myDomains: 'My Domains'

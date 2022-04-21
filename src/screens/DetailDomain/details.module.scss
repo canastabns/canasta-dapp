@@ -1,4 +1,4 @@
-@use '//src/scss/variables.scss' as v;
+@use '//src/scss/variables.scss'as v;
 
 .fontSmall {
   font-size: 0.6rem;
@@ -50,18 +50,19 @@
   align-items: center;
   cursor: pointer;
   @extend .noSelected;
+  color: #000000;
+  border-bottom: 1px solid #424242;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
 }
 
 .isButtonActive {
-  background-color: map-get($map: v.$colors, $key: black);
-  color: map-get($map: v.$colors, $key: primary);
+  background-color: #ddb72b;
+  color: map-get($map: v.$colors, $key: "black");
 }
 
 .isButtonInactive {
-  background-color: transparent;
-  border: 2px solid;
-  border-color: map-get($map: v.$colors, $key: primary);
-  color: map-get($map: v.$colors, $key: primary);
+  border-bottom: 1px solid #424242;
 }
 
 .switchModule {
@@ -79,6 +80,7 @@
     display: flex;
     align-items: center;
   }
+
   .aboutContent {
     width: 90%;
     gap: 1rem;
@@ -97,11 +99,13 @@
     margin-bottom: 8px;
     justify-content: flex-start;
   }
+
   .aboutContent {
     width: 90%;
     gap: 1rem;
     grid-template-columns: repeat(1, minmax(10rem, 1fr));
   }
+
   .isButton {
     min-width: 33%;
   }
