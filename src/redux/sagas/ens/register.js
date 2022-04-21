@@ -32,7 +32,7 @@ function* register() {
     const exists = commitHashData.domain && domainsInStorage.find(e => e.domain === commitHashData.domain);
 
     if(commitHashData.domain && !exists)
-      domainsInStorage.push({name: commitHashData.domain});
+      domainsInStorage.push({name: `${commitHashData.domain}.${process.env.REACT_APP_DOMAIN_TLD}`});
 
     LocalStorage.setItem('@app/myDomains', domainsInStorage);
 
