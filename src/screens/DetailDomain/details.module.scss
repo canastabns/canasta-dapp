@@ -34,35 +34,56 @@
   width: 100%;
 }
 
-.bodyDetail {
-  background-color: map-get($map: v.$colors, $key: lightPrimary);
+.tabs {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.iconFav {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.bodyDetail {
+  display: grid;
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
+  width: 100%;
+  grid-template-columns: 70% 30%;
 }
 
 .isButton {
-  min-height: 2.5rem;
+  padding: 1.5rem;
   min-width: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   @extend .noSelected;
-  color: #000000;
-  border-bottom: 1px solid #424242;
+  color: map-get($map: v.$colors, $key: primary);
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
 
 .isButtonActive {
-  background-color: #ddb72b;
-  color: map-get($map: v.$colors, $key: "black");
+  background-color: map-get($map: v.$colors, $key: black);
+  color: map-get($map: v.$colors, $key: primary);
 }
 
 .isButtonInactive {
-  border-bottom: 1px solid #424242;
+  background-color: map-get($map: v.$colors, $key: lightPrimary);
+  color: map-get($map: v.$colors, $key: black);
+}
+
+.borderLeft {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.borderRight {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
 .switchModule {
@@ -77,8 +98,10 @@
 
   .domainName {
     font-size: 1.2rem;
-    display: flex;
-    align-items: center;
+
+    svg {
+      width: 50px;
+    }
   }
 
   .aboutContent {
@@ -91,13 +114,22 @@
 @media (max-width: 576px) {
 
   .bodyDetail {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     padding: 1rem 1.3rem 1rem 1.2rem;
+    margin-bottom: 0;
+  }
+
+  .tabs {
+    justify-content: flex-start;
+    margin-bottom: 0.5rem;
   }
 
   .domainName {
     margin-bottom: 8px;
-    justify-content: flex-start;
+
+    svg {
+      width: 50px;
+    }
   }
 
   .aboutContent {

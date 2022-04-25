@@ -17,8 +17,8 @@ const DomainName = ({ domainLabel }) => {
   };
 
   return(
-    <div className={styles.domainName}>
-      <div className='position-relative'>
+    <div className={`${styles.domainName} pill bg-lightPrimary`}>
+      <div>
         {domainLabel}
         {copySuccess &&  (<div className={styles.copySuccess}>Copy Success!!</div>) }
         <Doc
@@ -28,11 +28,7 @@ const DomainName = ({ domainLabel }) => {
           onClick={copyLink}
         />
       </div>
-      <div className={styles.iconFav}>
-        <BaseFavouriteHeart
-          value={domainLabel}
-        />
-      </div>
+     
     </div>
   );
 };
