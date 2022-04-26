@@ -67,3 +67,11 @@
     width: 100%;
   }
 }
+
+@media (max-width: 576px) {
+  .socials {
+    &__network {
+      flex-direction: column;
+    }
+  }
+}

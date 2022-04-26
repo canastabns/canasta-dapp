@@ -10,6 +10,7 @@
   background-size: 100% 100%;
   z-index: 0;
 }
+
 .logoPrincipal {
   margin-top: 1.5rem;
   width: 325px;
@@ -18,7 +19,7 @@
 
 @media (max-width: 576px) {
   .logoPrincipal {
-    margin-top: 90px;
+    margin-top: 50px;
     height: 15rem;
   }
 }

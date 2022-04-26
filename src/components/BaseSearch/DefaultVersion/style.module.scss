@@ -98,19 +98,19 @@ $asset: "//src/assets";
     padding: 2rem 0 2rem 3rem;
 
     &::-webkit-input-placeholder {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
     &::-moz-placeholder {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
     &:-ms-input-placeholder {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
 
     &::placeholder {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
       padding-left: 0.0.5rem;
     }
   }
@@ -125,7 +125,7 @@ $asset: "//src/assets";
   }
 
   .searchButton {
-    font-size: 0.7rem;
+    font-size: 1rem;
     width: 11rem;
     height: 99%;
   }

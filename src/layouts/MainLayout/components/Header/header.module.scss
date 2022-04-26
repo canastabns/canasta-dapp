@@ -1,0 +1,182 @@
+@use '//src/scss/variables.scss'as v;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding-top: 4.5rem;
+  padding-right: 10rem;
+  z-index: 2;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+
+.linkeado {
+  color: #fff;
+}
+
+
+.primaryButton {
+  cursor: pointer;
+  color: map-get(v.$colors, primary);
+  min-width: 15rem;
+  height: 35px;
+  padding: 1.4rem 0;
+  border-width: 2px;
+  border-style: solid;
+  border-color: map-get(v.$colors, primary);
+  border-radius: 2rem;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 0 1rem;
+
+  a {
+    color: map-get(v.$colors, primary);
+    text-transform: uppercase;
+  }
+
+  text-transform: uppercase;
+}
+
+.header .menu {
+  width: 0;
+  font-size: 0.5rem;
+  transition: width .2s ease-in;
+}
+
+
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: map-get(v.$colors, primary);
+}
+
+.header li a:hover,
+.header .menu__btn:hover {
+  background-color: #10121a;
+  color: #fcfcfc;
+  font-weight: 600;
+}
+
+.header li a span:hover {
+  color: #ccc;
+  text-decoration: underline;
+}
+
+.header .menu__btn {
+  display: none;
+}
+
+
+/* menu icon */
+
+.header .menu__icon {
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  padding: 28px 20px;
+  user-select: none;
+  z-index: 5;
+}
+
+.header .menu__icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu__icon .navicon:before,
+.header .menu__icon .navicon:after {
+  background: map-get(v.$colors, primary);
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu__icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu__icon .navicon:after {
+  top: -5px;
+}
+
+
+.header .menu__btn:checked~.menu {
+  width: 100%;
+  font-size: 1.3rem;
+
+}
+
+.header .menu__btn:checked~.menu__icon .navicon {
+  background: transparent;
+}
+
+.header .menu__btn:checked~.menu__icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu__btn:checked~.menu__icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu__btn:checked~.menu__icon:not(.steps) .navicon:before,
+.header .menu__btn:checked~.menu__icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.menu__desktop {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .menu__desktop {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .header li {
+    float: left;
+  }
+
+  .header li a {
+    padding: 20px 30px;
+  }
+
+  .header .menu {
+    max-height: none;
+  }
+
+  .header .menu__icon {
+    display: none;
+  }
+}

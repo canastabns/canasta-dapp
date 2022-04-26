@@ -3,7 +3,8 @@
 .containerSelect {
   cursor: pointer;
   color: map-get(v.$colors, primary);
-  min-width: 100%;
+  min-width: 15rem;
+  height: 35px;
   box-shadow: none;
   border-width: 2px;
   border-style: solid;
