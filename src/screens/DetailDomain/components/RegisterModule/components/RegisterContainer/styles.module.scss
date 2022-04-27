@@ -1,4 +1,4 @@
-@use '//src/scss/variables.scss' as v;
+@use '//src/scss/variables.scss'as v;
 
 .fontSmall {
   font-size: 0.6rem;
@@ -15,8 +15,6 @@
 .selectTime {
   display: flex;
   flex-direction: column;
-  width: (22rem / 100%) * 100%;
-
   align-items: center;
   position: relative;
   margin-right: 0.5rem;
@@ -26,7 +24,6 @@
     width: 100%;
     align-items: center;
     position: relative;
-    border-top: 1px solid;
 
     .legendTime {
       display: flex;
@@ -46,7 +43,6 @@
 }
 
 .subBody {
-  background-color: map-get($map: v.$colors, $key: lightPrimary);
   display: flex;
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
@@ -76,23 +72,23 @@
 .selectQuantity,
 .totalEstimated {
   display: flex;
-  flex-direction: row;
   width: 100%;
-  margin-bottom: 2rem;
+}
+
+.selectQuantity {
+  width: 70%;
 }
 
 .totalEstimated {
   position: relative;
   display: flex;
   flex-direction: column;
+  margin: 0.5rem 0;
 }
 
 .amountRowSecond {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  position: relative;
-  border-top: 1px solid;
+  padding-left: 2rem;
+  padding-top: 0.5rem;
 }
 
 .amountInCrypto {
@@ -108,8 +104,9 @@
   margin-left: 1rem;
   font-size: 1.5rem;
 }
+
 .amountRowOne {
-  font-size: 1.2rem;
+  height: 50px;
   display: flex;
   width: 100%;
   align-items: center;
@@ -150,6 +147,7 @@
     display: flex;
     width: 100%;
   }
+
   .amountInCrypto {
     width: 100%;
     margin-top: 2rem;
@@ -158,15 +156,22 @@
       font-size: 1.375rem;
     }
   }
+
   .middleIconContainer {
     display: none;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
   .amountRowOne {
     font-size: 1rem;
+    height: auto;
   }
+
+  .selectQuantity {
+    width: 100%;
+  }
+
   .amountInCrypto {
     margin-left: 0;
 
@@ -174,6 +179,7 @@
       font-size: 1rem;
     }
   }
+
   .legendFav {
     font-size: 0.9rem;
   }

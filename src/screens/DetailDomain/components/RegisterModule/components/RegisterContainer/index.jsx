@@ -32,10 +32,9 @@ const RegisterContainer = (props) => {
             </div>
           </div>
 
-          <div className={styles.middleIconContainer} />
 
           <div className={styles.amountInCrypto}>
-            <div className={styles.amountRowOne}>
+            <div className={`${styles.amountRowOne} pill bg-lightPrimary`}>
               {props.rentPricesBegin && (
                 <div className={styles.amountUsd}>
                   <Spinner animation="border" size="sm"/>
@@ -62,7 +61,7 @@ const RegisterContainer = (props) => {
         </div>
 
         <div className={`${styles.totalEstimated}`}>
-          <div className={styles.amountRowOne}>
+          <div className={`${styles.amountRowOne} pill bg-lightPrimary`}>
             ${props.rentPrices.inBNB} BNB
             + at least ${props.rentPrices.gasEstimateInBNB} BNB gas fee
             = at least ${Number(props.rentPrices.totalInBNB).toFixed(3)} {'BNB '} ${props.rentPrices.totalInUSD} USD
@@ -75,8 +74,8 @@ const RegisterContainer = (props) => {
           </div>
         </div>
 
-        <div>
-          <div>
+        <div className={styles.amountRowSecond}>
+          <div className='d-block'>
             <Translate value={'detailPage.registerModule.has3StepRequired'} />
           </div>
           <div className={styles.legendFav}>

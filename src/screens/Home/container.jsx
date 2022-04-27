@@ -1,7 +1,7 @@
 import SearchInput from 'components/BaseSearch';
-import MainLayout from 'layouts/main';
+import MainLayout from 'layouts/MainLayout';
 
-import {BoxOne, BoxTwo, BoxThree, BoxFour} from './components/boxes';
+import {BoxOne, BoxTwo} from './components/boxes';
 import styles from './style.module.scss';
 
 const SearchContent = () =>  (

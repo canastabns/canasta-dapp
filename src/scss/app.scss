@@ -114,3 +114,52 @@ body {
   height: 5rem;
   font-size: 1.5rem;
 }
+
+.bg-primary {
+  background-color: map-get($map: v.$colors, $key: primary);
+}
+
+.bg-lightPrimary {
+  background-color: map-get($map: v.$colors, $key: lightPrimary);
+}
+
+.bg-secondary {
+  background-color: map-get($map: v.$colors, $key: secondary);
+}
+
+
+.text-primary {
+  color: map-get($map: v.$colors, $key: lightPrimary);
+}
+
+.text-secondary {
+  color: map-get($map: v.$colors, $key: secondary);
+}
+
+.pill {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+
+.noSelected {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.ant-progress-circle svg {
+  background: #000;
+}
+
+.ant-progress-circle.ant-progress-status-success .ant-progress-text {
+  color: #fff !important;
+}

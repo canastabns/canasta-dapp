@@ -1,10 +1,11 @@
 import {ReactComponent as LogoBurger} from 'assets/svg/icon-burger.svg';
 import {ReactComponent as LogoSvgHeader} from 'assets/svg/canasta-logo-yellow.svg';
 import BaseSearch from 'components/BaseSearch';
-import { slide as Menu } from 'react-burger-menu';
+import Menu from './Menu';
 import { useHistory } from 'react-router-dom';
 
 import styles from './detailHeader.module.scss';
+import BaseChangeLanguage from 'components/BaseChangeLanguage';
 
 const style = {
   bmBurgerButton: {
@@ -19,31 +20,39 @@ const style = {
   }
 };
 
+
+const options = [
+  {
+    value: 'es',
+    label: 'ESP'
+  },
+  {
+    value: 'en',
+    label: 'ENG'
+  }
+];
+
+
 const DetailHeader = () => {
   const history = useHistory();
   return(
     <div className={styles.main}>
-      <div className={`${styles.headerContainer}`}>
-        <div  className={styles.iconBurger}>
-          <Menu
-            right
-            styles={style}
-            className={styles.myMenu}
-            customBurgerIcon={ <LogoBurger /> }
-          >
-            <a id="home" className="menu-item" href="/">Home</a>
-          </Menu>
-        </div>
-        <div className={'col-3'}>
+      <div className={`${styles.header}`}>
+        <div className={styles.header__menu}>
           <LogoSvgHeader
             style={{width: 200, cursor: 'pointer'}}
             onClick={()=> history.push('/')}
           />
+          <div className={styles.menu}>
+            <Menu />
+          </div>
         </div>
-        <div className={`col-9 ${styles.searchHeader} `}>
+   
+        <div className={`${styles.header__search} `}>
           <div className={styles.searchComponent}>
             <BaseSearch />
           </div>
+          <div className={styles.main__language}><BaseChangeLanguage options={options} /></div>
         </div>
       </div>
     </div>
