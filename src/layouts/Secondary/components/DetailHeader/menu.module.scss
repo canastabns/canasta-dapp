@@ -2,14 +2,7 @@
 
 .header {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  padding-top: 4.5rem;
-  padding-right: 10rem;
   z-index: 2;
-  width: 100%;
-  margin: 0 auto;
   position: relative;
 }
 
@@ -64,7 +57,7 @@
 
 .header li a {
   display: block;
-  padding: 20px 20px;
+  padding: 15px 20px;
   text-decoration: none;
   color: map-get(v.$colors, primary);
 }
@@ -155,10 +148,7 @@
   display: none;
 }
 
-@media (min-width: 48em) {
-  .menu__desktop {
-    display: flex;
-  }
+@media (min-width: 769em) {
 
   .menu {
     display: none;

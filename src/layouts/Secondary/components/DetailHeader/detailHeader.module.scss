@@ -1,79 +1,114 @@
-@use '//src/scss/variables.scss' as v;
+@use '//src/scss/variables.scss'as v;
 
 .main {
   width: 100%;
   background-color: map-get($map: v.$colors, $key: dark);
+
+  &__language {
+    margin-left: 2rem;
+  }
 }
+
 .logoHeader {
   width: 25rem;
   height: 4rem;
 }
 
-.headerContainer {
+.header {
   display: flex;
-  width: 80%;
+  flex-direction: row;
+  width: 100%;
   height: 15rem;
   margin: 0 auto;
   align-items: center;
+  justify-content: space-around;
+
+  &__menu {
+    display: flex;
+    position: relative;
+    padding-left: 10rem;
+  }
+
+  &__search {
+    display: flex;
+    width: 60%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 5rem;
+  }
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 100%;
 }
 
 .searchComponent {
   width: 90%;
 }
-.searchHeader {
-  display: flex;
-  justify-content: flex-end;
-}
+
+
 .iconBurger {
   position: relative;
   display: none;
 }
+
 @media (max-width: 768px) {
-  .iconBurger {
-    display: flex;
-  }
-  .headerContainer {
-    width: 100%;
-    padding-left: 1rem;
+
+  .header {
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+
+    &__menu {
+      width: 100%;
+      padding-left: 3rem;
+    }
+
+    &__search {
+      padding-right: 0;
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
+    svg {
+      margin: 2rem 0;
+      margin-bottom: 1rem;
+      padding: 0;
+    }
   }
+
+  .main__language {
+    display: none;
+  }
+
+  .searchComponent {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+
   .searchHeader {
-    padding-left: 0.5rem;
-    margin-top: 0.5rem;
-    justify-content: flex-start;
-    width: 100% !important;
+    width: 100%;
   }
+
   .myMenu {
     width: 300px;
     background-color: map-get($map: v.$colors, $key: dark);
     color: #fff;
+
     & a {
       color: #fff;
       text-decoration: none;
       border-bottom: 1px solid #ccc;
       margin-bottom: 8px;
       padding-left: 1rem;
+
       &:hover {
         color: #ccc;
         background-color: rgb(7, 20, 36);
       }
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .searchComponent {
-    width: 95%;
-  }
-  .iconBurger {
-    width: 100%;
-    > div {
-      width: 100%;
-    }
-    > div {
-      position: relative;
     }
   }
 }

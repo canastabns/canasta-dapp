@@ -3,8 +3,8 @@
 .containerSelect {
   cursor: pointer;
   color: map-get(v.$colors, primary);
-  min-width: 15rem;
   height: 35px;
+  padding: 0 1rem;
   box-shadow: none;
   border-width: 2px;
   border-style: solid;
@@ -59,10 +59,7 @@ select.selectButton {
   z-index: 2;
   border: none;
   padding: 7px 1rem 7px 0.5rem;
-  // This is so hacky.. (for Firefox)
-  // Removes the default select arrow.
-  text-overflow: "";
-  text-indent: 0.5rem;
+
 
   // End of brutal hack
   & options {

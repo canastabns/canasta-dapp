@@ -1,8 +1,9 @@
-@use '//src/scss/fonts' as *;
+@use '//src/scss/fonts'as *;
 
 .container {
   display: flex;
   flex-direction: column;
+  padding-top: 3rem;
   @extend %fontOver;
 }
 
@@ -19,6 +20,7 @@
   .container {
     width: 98%;
   }
+
   .lateralMenuOption {
     width: 100%;
   }
