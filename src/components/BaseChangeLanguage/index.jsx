@@ -5,11 +5,10 @@ import * as i18nSelectors from 'redux/selectors/i18nSelector';
 import styles from './baseSelect.module.scss';
 
 
-const BaseChangeLanguage = () => {
+const BaseChangeLanguage = (props) => {
   const dispatch = useDispatch(),
     currentLocale = useSelector(state => i18nSelectors.getLocale(state));
 
-  const changeLanguage = e => dispatch(i18nActions.setLocale(e.target.value));
   const options = [
     {
       value: 'es',
@@ -20,7 +19,12 @@ const BaseChangeLanguage = () => {
       label: 'English'
     }
   ];
+  
 
+  const languages = props.options || options;
+
+  const changeLanguage = e => dispatch(i18nActions.setLocale(e.target.value));
+ 
   return(
     <div className={styles.containerSelect}>
       <select
@@ -28,7 +32,7 @@ const BaseChangeLanguage = () => {
         onChange={changeLanguage}
         value={currentLocale}
       >
-        {options && options.map((row, index) =>
+        {languages && languages.map((row, index) =>
           <option key={`option-${index}`} value={row.value}>{row.label}</option>)}
       </select>
     </div>

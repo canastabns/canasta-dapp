@@ -29,11 +29,7 @@ const LateralMenu = () => {
   
   return(
     <div className={styles.container}>
-      <br />
-      <div className={styles.lateralMenuOption}>
-        <BaseChangeLanguage />
-      </div>
-
+     
       <div className={styles.lateralMenuOption}>
         <BaseConnect />
       </div>

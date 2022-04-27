@@ -8,6 +8,7 @@ import {Spinner} from 'react-bootstrap';
 
 import DomainName from './components/DomainName';
 import styles from './details.module.scss';
+import BaseFavouriteHeart from 'components/BaseFavouriteHeart';
 
 const DetailDomainContainer = (props) => {
   return (
@@ -30,14 +31,21 @@ const DetailDomainContainer = (props) => {
                 domain={props.domain}
               />
 
-              <div className={'d-flex flex-row'}>
+              
+
+              <div className={styles.tabs}>
+                <div className={styles.iconFav}>
+                  <BaseFavouriteHeart
+                    value={props.domainLabel}
+                  />
+                </div>
                 {props.tabs.map((row, index) => (
                   <Fragment key={`tab-options-${index}`}>
                     {row.show && (
                       <div
                         data-tab={index}
                         onClick={() => row.onClick(index)}
-                        className={`${styles.isButton} ${props.activeTab === index ? styles.isButtonActive : styles.isButtonInactive}`}
+                        className={`${index === 0 ? styles.borderLeft : styles.borderRight} ${styles.isButton} ${props.activeTab === index ? styles.isButtonActive : styles.isButtonInactive}`}
                       >
                         <Translate value={row.label} />
                       </div>
