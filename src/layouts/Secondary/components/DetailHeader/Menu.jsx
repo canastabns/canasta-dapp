@@ -2,6 +2,7 @@ import {Link} from 'react-router-dom';
 import styles from './menu.module.scss';
 import { useSelector} from 'react-redux';
 import * as WalletSelects from 'redux/selectors/walletSelector';
+import BaseConnect from 'components/BaseConnect';
 
 const Menu = ()=> {
   const wallet = useSelector(state => WalletSelects.getWalletState(state));
@@ -11,7 +12,6 @@ const Menu = ()=> {
     { title: 'My Domains', url: `/domains/${wallet.address}`},
     { title: 'Favourites', url: '/favourites'},
     { title: 'Staking', url: '/tokens'}
-
   ];
 
   return(
@@ -28,7 +28,7 @@ const Menu = ()=> {
             <li key={key}><Link to={value.url}>{value.title}</Link></li>
           );
         })}
-        <li><a href=""> <span onClick={() => window.open('https://blog.canasta.domains/')}>Faqs</span></a></li>
+        <li> <a href=""> <BaseConnect isButton={false} /> </a></li>
         <li><a href=""> <span onClick={()=>changeLanguage('es')}>Esp</span> | <span onClick={()=>changeLanguage('en')}>Eng</span></a></li>
       </ul>
 

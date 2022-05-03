@@ -6,7 +6,7 @@ import * as Web3Interface from 'utils/web3';
 
 import styles from './baseConnect.module.scss';
 
-const BaseConnect = () => {
+const BaseConnect = ({isButton = true}) => {
   const dispatch = useDispatch(),
     providerConnect = () => dispatch(
       walletActions.walletConnect({withBrowserProvider: true})
@@ -23,11 +23,18 @@ const BaseConnect = () => {
     onClick = isConnectWithBrowserProvider ? providerDisconnect : providerConnect;
 
   return (
-    <div onClick={onClick} className={styles.connectButton}>
-    
-      <Translate value={text} />
-  
-    </div>
+    <>
+      {!isButton 
+        ?( <div className={styles.inLine}>
+          <Translate value={text} />
+        </div>) 
+        :( <div onClick={onClick} className={styles.connectButton}>
+          <Translate value={text} />
+        </div>)
+      }
+   
+    </>
+   
   );
 };
 
