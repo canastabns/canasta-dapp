@@ -11,6 +11,7 @@ import styles from './details.module.scss';
 import BaseFavouriteHeart from 'components/BaseFavouriteHeart';
 
 const DetailDomainContainer = (props) => {
+  
   return (
     <SecondaryLayout>
       {props.searchBegin && (

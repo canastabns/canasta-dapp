@@ -17,7 +17,6 @@ function HeaderVersion(props) {
       />
       <button
         className={styles.searchButton}
-        disabled=""
         type="submit"
         onClick={props.buttonHandler}
       >
