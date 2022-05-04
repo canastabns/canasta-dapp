@@ -72,3 +72,8 @@ export const crateStakeTokenForMoreTokens = createSelector(
   getState,
   state => state.createStakeTokenForMoreTokens
 );
+
+export const removeStakeTokenForMoreTokens = createSelector(
+  getState,
+  state => state.removeStakeTokenForMoreTokens
+);

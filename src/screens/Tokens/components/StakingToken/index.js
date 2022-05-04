@@ -19,7 +19,8 @@ const StakingTokenScreen = () => {
     tokenForMoreTokensData = useSelector(state => ensSelectors.tokenForMoreTokensData(state)),
     allowanceData = useSelector(state => ensSelectors.allowanceTokenForMoreTokens(state)),
     approveState = useSelector(state => ensSelectors.approveTokenForMoreTokens(state)),
-    createStakeState = useSelector(state => ensSelectors.crateStakeTokenForMoreTokens(state));
+    createStakeState = useSelector(state => ensSelectors.crateStakeTokenForMoreTokens(state)),
+    removeStakeState = useSelector(state => ensSelectors.removeStakeTokenForMoreTokens(state));
 
   const providerConnect = (payload = {}) => dispatch(
     walletActions.walletConnect({...payload, dispatch})
@@ -52,7 +53,13 @@ const StakingTokenScreen = () => {
       dispatch(ensActions.getTokenForMoreTokensData({
         address: walletState.address
       }));
-  }, [createStakeState.success]);
+
+    if(removeStakeState.success)
+      dispatch(ensActions.getTokenForMoreTokensData({
+        address: walletState.address
+      }));
+
+  }, [createStakeState.success, removeStakeState.success]);
 
   const amountInputHandler = e => setAmount(e.target.value);
 
@@ -61,6 +68,11 @@ const StakingTokenScreen = () => {
   const createStakeHandler = () => {
     if (amount > 0)
       dispatch(ensActions.createStakeTokenForMoreTokens({ amount }));
+  };
+
+  const removeStakeHandler = () => {
+    if (amount > 0)
+      dispatch(ensActions.removeStakeTokenForMoreTokens({ amount }));
   };
 
   return (
@@ -74,12 +86,14 @@ const StakingTokenScreen = () => {
       approveIsLoading={approveState.begin}
       createStakeIsLoading={createStakeState.begin}
 
+      removeStakeIsLoading={removeStakeState.begin}
       isStaked={tokenForMoreTokensData.data.amountStaked > 0}
 
       walletConnectHandler={() => providerConnect({withBrowserProvider: true})}
       amountInputHandler={amountInputHandler}
       approveHandler={approveHandler}
       createStakeHandler={createStakeHandler}
+      removeStakeHandler={removeStakeHandler}
     />
   );
 };

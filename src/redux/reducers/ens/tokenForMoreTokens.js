@@ -129,3 +129,35 @@ export function stakeTokenForMoreTokensReducer(
     }
   };
 }
+
+export function removeTokenForMoreTokensReducer(
+  state = initialState,
+  payload = {},
+  reducerName = 'removeStakeTokenForMoreTokens'
+) {
+  return {
+    [constants.REMOVE_TOKEN_FOR_MORE_TOKENS_BEGIN]: {
+      ...state,
+      [reducerName]: {
+        ...state[reducerName],
+        begin: true
+      }
+    },
+    [constants.REMOVE_TOKEN_FOR_MORE_TOKENS_SUCCESS]: {
+      ...state,
+      [reducerName]: {
+        ...state[reducerName],
+        begin: false,
+        success: true,
+        data: payload
+      }
+    },
+    [constants.REMOVE_TOKEN_FOR_MORE_TOKENS_FAILURE]: {
+      ...state,
+      [reducerName]: {
+        ...initialState[reducerName],
+        error: payload
+      }
+    }
+  };
+}

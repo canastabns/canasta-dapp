@@ -71,3 +71,8 @@ export const createStakeTokenForMoreTokens = payload => ({
   type: constants.STAKE_TOKEN_FOR_MORE_TOKENS_BEGIN,
   payload
 });
+
+export const removeStakeTokenForMoreTokens = payload => ({
+  type: constants.REMOVE_TOKEN_FOR_MORE_TOKENS_BEGIN,
+  payload
+});
