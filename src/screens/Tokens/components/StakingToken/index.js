@@ -74,6 +74,8 @@ const StakingTokenScreen = () => {
       approveIsLoading={approveState.begin}
       createStakeIsLoading={createStakeState.begin}
 
+      isStaked={tokenForMoreTokensData.data.amountStaked > 0}
+
       walletConnectHandler={() => providerConnect({withBrowserProvider: true})}
       amountInputHandler={amountInputHandler}
       approveHandler={approveHandler}

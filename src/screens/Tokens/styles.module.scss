@@ -39,3 +39,17 @@
     display: none;
   }
 }
+
+
+@media (max-width: 720px) {
+  .tabs {
+    width: 100%;
+  }
+  .tab {
+    border-radius: 0;
+    &__header {
+      display: flex;
+      margin-left: 0;
+    }
+  }
+}
