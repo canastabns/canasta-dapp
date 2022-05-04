@@ -16,7 +16,8 @@ import {
   getStakeTokenForMoreTokensData,
   checkIfMaxAmountIsApprove,
   approveForTokenForMoreToken,
-  createStakeForTokenForMoreToken
+  createStakeForTokenForMoreToken,
+  removeStakeForTokenForMoreToken
 } from './stakeTokenForMoreTokens';
 
 export default function* rootInitialSaga() {
@@ -35,6 +36,7 @@ export default function* rootInitialSaga() {
     takeEvery(walletConstants.GET_TOKEN_FOR_MORE_TOKENS_DATA_BEGIN, getStakeTokenForMoreTokensData),
     takeEvery(walletConstants.CHECK_ALLOWANCE_TOKEN_FOR_MORE_TOKENS_BEGIN, checkIfMaxAmountIsApprove),
     takeEvery(walletConstants.APPROVE_TOKEN_FOR_MORE_TOKENS_BEGIN, approveForTokenForMoreToken),
-    takeEvery(walletConstants.STAKE_TOKEN_FOR_MORE_TOKENS_BEGIN, createStakeForTokenForMoreToken)
+    takeEvery(walletConstants.STAKE_TOKEN_FOR_MORE_TOKENS_BEGIN, createStakeForTokenForMoreToken),
+    takeEvery(walletConstants.REMOVE_TOKEN_FOR_MORE_TOKENS_BEGIN, removeStakeForTokenForMoreToken)
   ]);
 }

@@ -56,6 +56,16 @@ const ContainerStakingToken = (props) => {
                 text={'Connect'}
               />
             )}
+
+
+            {props.isStaked && (
+              <BaseButton
+                onClick={props.removeStakeHandler}
+                className={styles.buttonBuy}
+                text={'Withdraw'}
+                isLoading={props.removeStakeIsLoading}
+              />
+            )}
           </div>
          
         </div>
