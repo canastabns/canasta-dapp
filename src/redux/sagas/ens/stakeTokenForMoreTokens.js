@@ -116,3 +116,23 @@ export function* createStakeForTokenForMoreToken({payload}) {
     });
   }
 }
+
+export function* removeStakeForTokenForMoreToken({payload}) {
+  try {
+    const {
+      stakeForMoreSameToken
+    } = yield setupENS();
+
+    yield stakeForMoreSameToken.removeStake(payload.amount);
+
+    yield put({
+      type: ensConstants.REMOVE_TOKEN_FOR_MORE_TOKENS_SUCCESS
+    });
+  } catch (error) {
+    console.log('approve error: ', error);
+    yield put({
+      type: ensConstants.REMOVE_TOKEN_FOR_MORE_TOKENS_FAILURE,
+      payload: error?.message
+    });
+  }
+}

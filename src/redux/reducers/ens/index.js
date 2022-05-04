@@ -15,7 +15,8 @@ import {
   getTokenForMoreTokensDataReducer,
   checkAllowanceTokenForMoreTokensReducer,
   approveTokenForMoreTokensReducer,
-  stakeTokenForMoreTokensReducer
+  stakeTokenForMoreTokensReducer,
+  removeTokenForMoreTokensReducer
 } from './tokenForMoreTokens';
 
 export const initialState = {
@@ -122,6 +123,12 @@ export const initialState = {
     error: null,
     success: false,
     data: {}
+  },
+  removeStakeTokenForMoreTokens: {
+    begin: false,
+    error: null,
+    success: false,
+    data: {}
   }
 };
 
@@ -142,7 +149,8 @@ export default function reducer(state = initialState, action = {}) {
     ...getTokenForMoreTokensDataReducer(state, payload, 'tokenForMoreTokensData'),
     ...checkAllowanceTokenForMoreTokensReducer(state, payload, 'checkTokenForMoreTokens'),
     ...approveTokenForMoreTokensReducer(state, payload, 'approveTokenForMoreTokens'),
-    ...stakeTokenForMoreTokensReducer(state, payload, 'createStakeTokenForMoreTokens')
+    ...stakeTokenForMoreTokensReducer(state, payload, 'createStakeTokenForMoreTokens'),
+    ...removeTokenForMoreTokensReducer(state, payload, 'removeStakeTokenForMoreTokens')
   };
 
   return mapping[action.type] || state;

@@ -32,4 +32,9 @@ export class StakeForMoreSameToken {
     const accounts = await Web3Interface.getAccounts();
     return this.contact.createStake(Web3.utils.toWei(`${amount}`, 'ether')).send({ from: accounts[0] });
   }
+
+  async removeStake(amount) {
+    const accounts = await Web3Interface.getAccounts();
+    return this.contact.removeStake(Web3.utils.toWei(`${amount}`, 'ether')).send({ from: accounts[0] });
+  }
 }
